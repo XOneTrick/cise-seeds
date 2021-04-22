@@ -43,19 +43,20 @@ export default function App() {
   return (
     <>
       {/* <Navbar bg="dark" expand="lg"> */}
-      <Navbar className="nav-color" variant="light">
-        <Navbar.Brand href="#home">nav bar</Navbar.Brand>
+      <Navbar className="navbar-color" variant="light">
+        <Navbar.Brand href="#home">SEED</Navbar.Brand>
         <Navbar.Toggle />
         <Navbar.Collapse>
           <Nav className="mr-auto">
-            <Nav.Link href="#home">home</Nav.Link>
-            <Nav.Link href="#foo">foo</Nav.Link>
+            <Nav.Link href="#home">Home</Nav.Link>
+            <Nav.Link href="#getting-started">Getting Started</Nav.Link>
+            <Nav.Link href="#about-us">About Us</Nav.Link>
             <NavDropdown title="Dropdown">
-              <NavDropdown.Item href="#action/1">action 1</NavDropdown.Item>
-              <NavDropdown.Item href="#action/2">action 2</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3">action 3</NavDropdown.Item>
+              <NavDropdown.Item href="#item/1">Item 1</NavDropdown.Item>
+              <NavDropdown.Item href="#item/2">Item 2</NavDropdown.Item>
+              <NavDropdown.Item href="#item/3">Item 3</NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/4">action 4</NavDropdown.Item>
+              <NavDropdown.Item href="#item/4">Item 4</NavDropdown.Item>
             </NavDropdown>
           </Nav>
           <Form inline>
@@ -64,6 +65,34 @@ export default function App() {
           </Form>
         </Navbar.Collapse>
       </Navbar>
+      <Nav variant="tabs" defaultActiveKey="/home">
+  {/* <Nav.Item>
+    <Nav.Link href="/home">Active</Nav.Link>
+  </Nav.Item> */}
+  <Nav.Item>
+    <Nav.Link eventKey="link-1">Option 1</Nav.Link>
+  </Nav.Item>
+  <Nav.Item>
+    <Nav.Link eventKey="link-2">Option 2</Nav.Link>
+  </Nav.Item>
+  <Nav.Item>
+    <Nav.Link eventKey="link-3">Option 3</Nav.Link>
+  </Nav.Item>
+  <Nav.Item>
+    <Nav.Link eventKey="link-4">Option 4</Nav.Link>
+  </Nav.Item>
+  <Nav.Item>
+    <Nav.Link eventKey="link-5">Option 5</Nav.Link>
+  </Nav.Item>
+  <Nav.Item>
+    <Nav.Link eventKey="link-6">Option 6</Nav.Link>
+  </Nav.Item>
+  {/* <Nav.Item>
+    <Nav.Link eventKey="disabled" disabled>
+      Disabled
+    </Nav.Link>
+  </Nav.Item> */}
+</Nav>
     </>
   );
 }
