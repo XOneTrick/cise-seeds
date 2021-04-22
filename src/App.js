@@ -20,8 +20,8 @@ function App() {
     //   </header>
     // </div>
     <div className = "App">
-        <header>CISE SEEDS</header>
-        <p>Welcome to our home page.</p>
+        <header className="App-header">CISE SEEDS</header>
+        <p className="Sub-header">Welcome to our home page.</p>
     </div>
   );
 }
