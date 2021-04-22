@@ -1,5 +1,5 @@
 // import logo from './logo.svg';
-// import './App.css';
+import './App.css';
 
 
 // function App() {
@@ -42,7 +42,8 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 export default function App() {
   return (
     <>
-      <Navbar bg="light" expand="lg">
+      {/* <Navbar bg="dark" expand="lg"> */}
+      <Navbar className="nav-color" variant="light">
         <Navbar.Brand href="#home">nav bar</Navbar.Brand>
         <Navbar.Toggle />
         <Navbar.Collapse>
@@ -66,5 +67,3 @@ export default function App() {
     </>
   );
 }
-
-// export default App;
