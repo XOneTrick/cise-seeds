@@ -30,14 +30,21 @@
 
 .Sub-header
 {
-    color: #f50b0b;
+  color: #f50b0b;
 }
 
 .navbar-color
 {
-  background-color: #32cf66;
+  background-color: #bdbebd;
 }
 
+.navbar-button-color
+{
+  background-color: rgb(219, 68, 48);
+  color: black;
+  text-align: center;
+  font-size: 12px;
+}
 
 @keyframes App-logo-spin {
   from {

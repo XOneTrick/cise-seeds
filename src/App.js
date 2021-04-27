@@ -61,15 +61,18 @@ export default function App() {
           </Nav>
           <Form inline>
             <FormControl type="text" placeholder="search" className="mr-sm-2" />
-            <Button variant="outline-primary">search</Button>
+            <Button className="navbar-button-color" onClick={ searchButtonClicked }>search</Button>
           </Form>
+          <Button className="navbar-button-color">Login</Button>
+          <Button className="navbar-button-color">Sign Up</Button>
         </Navbar.Collapse>
       </Navbar>
-      <Nav variant="tabs" defaultActiveKey="/home">
+      {/* <Nav variant="tabs" defaultActiveKey="/home"> */}
+        {/* navbar using tabs */}
   {/* <Nav.Item>
     <Nav.Link href="/home">Active</Nav.Link>
   </Nav.Item> */}
-  <Nav.Item>
+  {/* <Nav.Item>
     <Nav.Link eventKey="link-1">Option 1</Nav.Link>
   </Nav.Item>
   <Nav.Item>
@@ -86,13 +89,18 @@ export default function App() {
   </Nav.Item>
   <Nav.Item>
     <Nav.Link eventKey="link-6">Option 6</Nav.Link>
-  </Nav.Item>
+  </Nav.Item> */}
   {/* <Nav.Item>
     <Nav.Link eventKey="disabled" disabled>
       Disabled
     </Nav.Link>
   </Nav.Item> */}
-</Nav>
+{/* </Nav> */}
     </>
   );
+}
+
+function searchButtonClicked()
+{
+  alert("Search button pressed, will take input from search field and search (future).");
 }
