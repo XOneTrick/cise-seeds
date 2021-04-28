@@ -1,7 +1,6 @@
 // import logo from './logo.svg';
 import './App.css';
 import hcbgImage from "./books-1655783.jpg";
-
 // function App() {
 //   return (
 //     // <div className="App">
@@ -78,9 +77,9 @@ export default function App() {
         }}
       >
       <h1 className="welcome-header-home">Welcome to SEED</h1>
-      <p className="Purpose-p"><b>Purpose: </b>The purpose of this website it to allow for practitionars to look up articles from
-      our database. <br />First off you should vist the "Getting Started" page. This will walk you through
-      how to use our services. <br />If you are still stuck please vist our "FAQ & Help" page.
+      <p className="purpose-p"><b className="purpose-bold">Purpose: </b>The purpose of this website it to allow for practitionars to look up articles from
+      our database. First off you should vist the "Getting Started" page. This will walk you through
+      how to use our services. If you are still stuck please vist our "FAQ & Help" page.
       </p>
       </div>
       {/* <Nav variant="tabs" defaultActiveKey="/home"> */}

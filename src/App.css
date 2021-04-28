@@ -13,6 +13,18 @@
   }
 }
 
+/* Importing Fonts */
+@font-face {
+  font-family: amusing-font;
+  /* src: url(/fonts/amusing-font/AmusingFont.otf) format("opentype"); */
+  src: url(AmusingFont.otf) format("opentype");
+}
+
+@font-face {
+  font-family: EticalDemoRegular;
+  src: url(EticalDemoRegular.ttf) format("truetype");
+}
+
 .App-header {
   background-color: #32cf66;
   min-height: 100vh;
@@ -35,17 +47,29 @@
 
 .welcome-header-home
 {
-  color: #b2c21f;
+  color: #d9ff00;
   /* min-height: 100vh; */
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: calc(14px + 2vmin);
+  font-size: calc(24px + 2vmin);
+  font-family: amusing-font;
 }
 
-.Purpose-p
+.purpose-p
 {
-  margin-left: 10%;
+  margin-left: 2%;
+  margin-right: 2%;
+  background-color: rgba(124, 151, 151, 0.671);
+  color: #ffffff;
+  font-family: EticalDemoRegular;
+  font-size: calc(14px + 2vmin);
+  word-wrap: break-word;
+}
+
+.purpose-bold
+{
+  color: #c3da45;
 }
 
 /* Navbar styling */
@@ -56,10 +80,9 @@
 
 .navbar-button-color
 {
-  background-color: rgb(219, 68, 48);
-  color: black;
+  /* background-color: rgb(219, 68, 48); */
+  color: rgb(255, 0, 0);
   text-align: center;
-  font-size: 12px;
 }
 
 @keyframes App-logo-spin {
