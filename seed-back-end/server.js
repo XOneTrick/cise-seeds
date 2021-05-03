@@ -1,6 +1,6 @@
 import express from "express";
 import mongoose, { connection } from "mongoose";
-import Articles from "./dbData.js";
+import Articles from "./dbArticles.js";
 
 //app config
 
