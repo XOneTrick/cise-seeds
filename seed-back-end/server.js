@@ -1,7 +1,7 @@
 import express from "express";
-import mongoose, { connection } from "mongoose";
+import mongoose from "mongoose";
 import Articles from "./dbArticles.js";
-
+import cors from "cors";
 //app config
 
 const app = express();
@@ -13,6 +13,9 @@ const connection_url =
 
 //middlewares
 
+app.use(express.json());
+app.use(cors());
+
 // db config
 
 mongoose.connect(connection_url, {
@@ -23,12 +26,12 @@ mongoose.connect(connection_url, {
 
 //api endpoints
 
-app.get("/", (req, res) => res.send("Hello world!"));
+app.get("/", (req, res) => res.status(200).send("Hello world!"));
 
-app.post("/seeds/articles", (req, res) => {
-  const dbData = req.body;
+app.post("/seeds/article", (req, res) => {
+  const dbArticle = req.body;
 
-  Articles.create(dbData, (err, data) => {
+  Articles.create(dbArticle, (err, data) => {
     if (err) {
       res.status(500).send(err);
     } else {
@@ -37,7 +40,7 @@ app.post("/seeds/articles", (req, res) => {
   });
 });
 
-app.get("/seeds/articles", (req, res) => {
+app.get("/seeds/article", (req, res) => {
   Articles.find((err, data) => {
     if (err) {
       res.status(500).send(err);
