@@ -9,6 +9,8 @@ const articleSchema = mongoose.Schema({
   article: String,
   publishdate: Number,
   year: Number,
+  moderated: Boolean,
+  datepublished: Date,
 });
 
 export default mongoose.model("articles", articleSchema);
