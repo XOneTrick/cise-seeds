@@ -2,32 +2,36 @@ import React from 'react'
 import { useTable } from 'react-table'
 
 function BasicTable() {
-
+  // const columnHeaders = ['Title', 'Author', 'SE Method', 'Research Method', 'Journal', 'Article', 'Publish Date', 'Year', 'Moderated', 'Date Published'];
+  // const columnNames = ['col1', 'col2', 'col3', 'col4', 'col5', 'col6', 'col7', 'col8', 'col9', 'col10'];
     const data = React.useMemo(
  
       () => [
  
         {
  
-          col1: 'Hello',
- 
-          col2: 'World',
- 
-        },
- 
-        {
- 
-          col1: 'react-table',
- 
-          col2: 'rocks',
+          // col1: 'Hello',// title, author, se method, research method, journal, article, publish date, year, moderated, date published
+          
+          // col2: 'World',
+          col1: 'r1c1',
+          col2: 'r1c2',
+          col3: 'r1c3',
  
         },
  
         {
  
-          col1: 'whatever',
+          col1: 'r2c1',
+          col2: 'r2c2',
+          col3: 'r2c3',
  
-          col2: 'you want',
+        },
+ 
+        {
+ 
+          col1: 'r3c1',
+          col2: 'r3c2',
+          col3: 'r3c3',
  
         },
  
@@ -37,15 +41,14 @@ function BasicTable() {
  
     )
  
-  
- 
+      
     const columns = React.useMemo(
  
       () => [
  
         {
  
-          Header: 'Column 1',
+          Header: 'Title',
  
           accessor: 'col1', // accessor is the "key" in the data
  
@@ -53,12 +56,76 @@ function BasicTable() {
  
         {
  
-          Header: 'Column 2',
+          Header: 'Author',
  
           accessor: 'col2',
  
         },
+        
+        {
  
+          Header: 'SE Methods',
+ 
+          accessor: 'col3',
+ 
+        },
+
+        {
+ 
+          Header: 'Research Method',
+ 
+          accessor: 'col4',
+ 
+        },
+
+        {
+ 
+          Header: 'Journal',
+ 
+          accessor: 'col5',
+ 
+        },
+
+        {
+ 
+          Header: 'Article',
+ 
+          accessor: 'col6',
+ 
+        },
+
+        {
+ 
+          Header: 'Publish Date',
+ 
+          accessor: 'col7',
+ 
+        },
+
+        {
+ 
+          Header: 'Year',
+ 
+          accessor: 'col8',
+ 
+        },
+
+        {
+ 
+          Header: 'Moderated',
+ 
+          accessor: 'col9',
+ 
+        },
+
+        {
+ 
+          Header: 'Date Published',
+ 
+          accessor: 'col10',
+ 
+        },
+
       ],
  
       []
