@@ -1,3 +1,6 @@
+// Saving data
+// import dataMongoDB from "./dataMongoDB.js";
+// Getting data
 import React, { Component } from 'react'
 import axios from 'axios';
 const API_URL = 'http://localhost:8082/seeds/article';
@@ -6,6 +9,8 @@ class GetDataFromBackEnd extends Component{
   state = {
     rows: []
   }
+//   dataInst = new dataMongoDB("testTitle");
+  
   componentDidMount() {
     const url = `${API_URL}`;
     axios.get(url).then(response => response.data)
@@ -30,14 +35,20 @@ class GetDataFromBackEnd extends Component{
                <h5 className="card-title">{db.title}</h5>
               <h6 className="card-subtitle mb-2 text-muted">
               {/* {user.email}              */}
+              
               </h6>
             </div>
           </div>
         ))}
         <h5 className="card-title">{this.state.rows.length}</h5>
         </div>
+        {/* <div> */}
+            
+            {/* <dataMongoDB></dataMongoDB> */}
+        {/* </div> */}
+        {/* build the table */}
         <div>
-          BuildTable();
+          
         </div>
        </div>
        
