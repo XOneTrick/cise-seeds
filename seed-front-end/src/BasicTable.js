@@ -1,9 +1,10 @@
 import React from 'react'
 import { useTable } from 'react-table'
-
+import { dataDB } from "./dataMongoDB.js";
 function BasicTable() {
   // const columnHeaders = ['Title', 'Author', 'SE Method', 'Research Method', 'Journal', 'Article', 'Publish Date', 'Year', 'Moderated', 'Date Published'];
   // const columnNames = ['col1', 'col2', 'col3', 'col4', 'col5', 'col6', 'col7', 'col8', 'col9', 'col10'];
+  
     const data = React.useMemo(
  
       () => [
@@ -13,7 +14,8 @@ function BasicTable() {
           // col1: 'Hello',// title, author, se method, research method, journal, article, publish date, year, moderated, date published
           
           // col2: 'World',
-          col1: 'r1c1',
+          // col1: 'r1c1',//testing
+          col1: dataDB.title,
           col2: 'r1c2',
           col3: 'r1c3',
  

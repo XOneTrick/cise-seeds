@@ -1,16 +1,21 @@
 import React from 'react';
 import './App.css';
 import BasicTable from "./BasicTable.js";
+// import { dataDB } from "./dataMongoDB.js";
 import GetDataFromBackEnd from "./GetDataFromBackEnd.js";
 // import SortingTable from './SortingTable.js';
 
 function App()
 {
+  // var dbInstance = new dataMongoDB().da;
+  // dbInstance.
+  // dataDB.title = "test";
   return (
     <div>
       <h1>Header</h1>
       <BasicTable></BasicTable>
       <GetDataFromBackEnd></GetDataFromBackEnd>
+      {/* <h1>{dataDB.title}</h1> */}
     </div>
   );
 }

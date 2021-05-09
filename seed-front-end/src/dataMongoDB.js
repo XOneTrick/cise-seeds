@@ -1,44 +1,49 @@
-// const dataDB = null;
-var title = "";
-var author = "";
-var journal = "";
-var seMethod = "";
-var moderated = false;
-var version = 0;
+const dataDB = {
+    title: "",
 
-function dataMongoDB(title, author, journal, seMethod, moderated, version)
-{
-    this.title = title;
 }
+export { dataDB };
+// // const dataDB = null;
+// var title = "";
+// var author = "";
+// var journal = "";
+// var seMethod = "";
+// var moderated = false;
+// var version = 0;
 
-export function GetTitle()
-{
-    return title;
-}
+// function dataMongoDB(title, author, journal, seMethod, moderated, version)
+// {
+//     this.title = title;
+// }
 
-export function GetAuthor()
-{
-    return author;
-}
+// export function GetTitle()
+// {
+//     return title;
+// }
 
-export function GetJournal()
-{
-    return journal;
-}
+// export function GetAuthor()
+// {
+//     return author;
+// }
 
-export function GetSEMethod()
-{
-    return seMethod;
-}
+// export function GetJournal()
+// {
+//     return journal;
+// }
 
-export function GetModerated()
-{
-    return moderated;
-}
+// export function GetSEMethod()
+// {
+//     return seMethod;
+// }
 
-export function GetVersion()
-{
-    return version;
-}
+// export function GetModerated()
+// {
+//     return moderated;
+// }
 
-export default dataMongoDB;
+// export function GetVersion()
+// {
+//     return version;
+// }
+
+// export default dataMongoDB;
