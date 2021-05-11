@@ -1,101 +1,166 @@
 import React from "react";
-import styled from "styled-components";
-import Table from "@material-ui/core/Table";
-import TableBody from "@material-ui/core/TableBody";
-import TableCell from "@material-ui/core/TableCell";
-import TableContainer from "@material-ui/core/TableContainer";
-import TableHead from "@material-ui/core/TableHead";
-import TablePagination from "@material-ui/core/TablePagination";
-import TableRow from "@material-ui/core/TableRow";
-import TableSortLabel from "@material-ui/core/TableSortLabel";
-import Typography from "@material-ui/core/Typography";
-import Paper from "@material-ui/core/Paper";
-import FormControlLabel from "@material-ui/core/FormControlLabel";
-import Switch from "@material-ui/core/Switch";
-import Button from "@material-ui/core/Button";
+import { useTable } from "react-table";
 
-function descendingComparator(a, b, orderBy) {
-  if (b[orderBy] < a[orderBy]) {
-    return -1;
-  }
-  if (b[orderBy] > a[orderBy]) {
-    return 1;
-  }
-  return 0;
-}
+function BasicTable() {
+  // const columnHeaders = ['Title', 'Author', 'SE Method', 'Research Method', 'Journal', 'Article', 'Publish Date', 'Year', 'Moderated', 'Date Published'];
+  // const columnNames = ['col1', 'col2', 'col3', 'col4', 'col5', 'col6', 'col7', 'col8', 'col9', 'col10'];
+  const data = React.useMemo(
+    () => [
+      {
+        // col1: 'Hello',// title, author, se method, research method, journal, article, publish date, year, moderated, date published
 
-function getComparator(order, orderBy) {
-  return order === "desc"
-    ? (a, b) => descendingComparator(a, b, orderBy)
-    : (a, b) => -descendingComparator(a, b, orderBy);
-}
+        // col2: 'World',
+        col1: "r1c1",
+        col2: "r1c2",
+        col3: "r1c3",
+      },
 
-function stableSort(array, comparator) {
-  const stabilizedThis = array.map((el, index) => [el, index]);
-  stabilizedThis.sort((a, b) => {
-    const order = comparator(a[0], b[0]);
-    if (order !== 0) return order;
-    return a[1] - b[1];
-  });
-  return stabilizedThis.map((el) => el[0]);
-}
+      {
+        col1: "r2c1",
+        col2: "r2c2",
+        col3: "r2c3",
+      },
 
-const tableHeader = [
-  {
-    id: "Method",
-    color: "secondary",
-    align: "center",
-    //disablePadding: true,
-    label: "method",
-  },
-  {
-    id: "Title",
-    color: "secondary",
-    align: "center",
-    label: "title",
-  },
-  {
-    id: "Author",
-    color: "secondary",
-    aligh: "center",
-    label: "author",
-  },
-];
+      {
+        col1: "r3c1",
+        col2: "r3c2",
+        col3: "r3c3",
+      },
+    ],
 
-function ArticleTableHead(props) {
-  const { classes, order, orderBy, onRequestSort } = props;
-  const createSortHandler = (property) => (event) => {
-    onRequestSort(event, property);
-  };
+    []
+  );
+
+  const columns = React.useMemo(
+    () => [
+      {
+        Header: "Title",
+
+        accessor: "col1", // accessor is the "key" in the data
+      },
+
+      {
+        Header: "Author",
+
+        accessor: "col2",
+      },
+
+      {
+        Header: "SE Methods",
+
+        accessor: "col3",
+      },
+
+      {
+        Header: "Research Method",
+
+        accessor: "col4",
+      },
+
+      {
+        Header: "Journal",
+
+        accessor: "col5",
+      },
+
+      {
+        Header: "Article",
+
+        accessor: "col6",
+      },
+
+      {
+        Header: "Publish Date",
+
+        accessor: "col7",
+      },
+
+      {
+        Header: "Year",
+
+        accessor: "col8",
+      },
+
+      {
+        Header: "Moderated",
+
+        accessor: "col9",
+      },
+
+      {
+        Header: "Date Published",
+
+        accessor: "col10",
+      },
+    ],
+
+    []
+  );
+
+  const {
+    getTableProps,
+
+    getTableBodyProps,
+
+    headerGroups,
+
+    rows,
+
+    prepareRow,
+  } = useTable({ columns, data });
 
   return (
-    <TableHead>
-      <TableRow>
-        {tableHeader.map((tableHeader) => (
-          <TableCell
-            key={tableHeader.id}
-            align={tableHeader.align}
-            padding={tableHeader.disablePadding ? "none" : "default"}
-            sortDirection={orderBy === tableHeader.id ? order : false}
-          >
-            <TableSortLabel
-              active={orderBy === tableHeader.id}
-              direction={orderBy === tableHeader.id ? order : "ascd"}
-              onClick={createSortHandler(tableHeader.id)}
-            >
-              <Typography color={tableHeader.color}>
-                {tableHeader.label}
-              </Typography>
-              {orderBy === tableHeader.id ? (
-                <span className={classes.visuallyHidden}>
-                  {order === "descd" ? "sorted descending" : "sorted ascending"}
-                </span>
-              ) : null}
-            </TableSortLabel>
-          </TableCell>
+    <table {...getTableProps()} style={{ border: "solid 1px blue" }}>
+      <thead>
+        {headerGroups.map((headerGroup) => (
+          <tr {...headerGroup.getHeaderGroupProps()}>
+            {headerGroup.headers.map((column) => (
+              <th
+                {...column.getHeaderProps()}
+                style={{
+                  borderBottom: "solid 3px red",
+
+                  background: "aliceblue",
+
+                  color: "black",
+
+                  fontWeight: "bold",
+                }}
+              >
+                {column.render("Header")}
+              </th>
+            ))}
+          </tr>
         ))}
-      </TableRow>
-    </TableHead>
+      </thead>
+
+      <tbody {...getTableBodyProps()}>
+        {rows.map((row) => {
+          prepareRow(row);
+
+          return (
+            <tr {...row.getRowProps()}>
+              {row.cells.map((cell) => {
+                return (
+                  <td
+                    {...cell.getCellProps()}
+                    style={{
+                      padding: "10px",
+
+                      border: "solid 1px gray",
+
+                      background: "papayawhip",
+                    }}
+                  >
+                    {cell.render("Cell")}
+                  </td>
+                );
+              })}
+            </tr>
+          );
+        })}
+      </tbody>
+    </table>
   );
 }
 
