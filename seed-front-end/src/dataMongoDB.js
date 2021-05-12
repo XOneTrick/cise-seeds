@@ -3,6 +3,13 @@ const dataDB = {
     title: [],
     author: [],
     seMethods: [],
+    researchMethod: [],
+    journal: [],
+    article: [],
+    publishDate: [],
+    year: [],
+    moderated: [],
+    datePublished: [],
 }
 export { dataDB };
 // // const dataDB = null;

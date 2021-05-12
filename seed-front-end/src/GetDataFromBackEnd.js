@@ -49,6 +49,12 @@ class GetDataFromBackEnd extends Component{
                 {dataDB.title.push(db.title)}
                 {dataDB.author.push(db.author)}
                 {dataDB.seMethods.push(db.semethod)}
+                {/* {dataDB.researchMethod.push(db.)} */}
+                {dataDB.journal.push(db.journal)}
+                {dataDB.article.push(db.article)}
+                {/* {dataDB.publishDate.push(db.)} */}
+                {dataDB.year.push(db.year)}
+                {/* {dataDB.moderated.push(db.moderated)} */}
                 {/* {dataDB.title = push} */}
               </h6>
             </div>

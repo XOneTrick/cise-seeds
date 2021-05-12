@@ -5,6 +5,19 @@ function BasicTable() {
   // const columnHeaders = ['Title', 'Author', 'SE Method', 'Research Method', 'Journal', 'Article', 'Publish Date', 'Year', 'Moderated', 'Date Published'];
   // const columnNames = ['col1', 'col2', 'col3', 'col4', 'col5', 'col6', 'col7', 'col8', 'col9', 'col10'];
   const d = require("./dataMongoDB.js");
+  // var tmpMonderated = [];
+  // for (var i = 0; i < d.dataDB.moderated.length; i++)
+  // {
+  //   if (!d.dataDB.moderated[i])
+  //   {
+  //     tmpMonderated[i].push("false");
+  //   }
+  //   else
+  //   {
+  //     tmpMonderated[i].push("true");
+  //   }
+  // }
+  // d.dataDB.moderated = tmpMonderated;
   // var a = require("./GetDataFromBackEnd.js");
     const data = React.useMemo(
       
@@ -19,15 +32,23 @@ function BasicTable() {
           col1: d.dataDB.title[0],
           col2: d.dataDB.author[0],
           col3: d.dataDB.seMethods[0],
- 
+          col4: d.dataDB.researchMethod[0],
+          col5: d.dataDB.journal[0],
+          col6: d.dataDB.article[0],
+          col8: d.dataDB.year[0],
+          // col9: d.dataDB.moderated[0],
         },
  
         {
  
-           col1: d.dataDB.title[1],
+          col1: d.dataDB.title[1],
           col2: d.dataDB.author[1],
           col3: d.dataDB.seMethods[1],
- 
+          col4: d.dataDB.researchMethod[1],
+          col5: d.dataDB.journal[1],
+          col6: d.dataDB.article[1],
+          col8: d.dataDB.year[1],
+          // col9: d.dataDB.moderated[1],
         },
  
         {
@@ -35,7 +56,12 @@ function BasicTable() {
           col1: d.dataDB.title[2],
           col2: d.dataDB.author[2],
           col3: d.dataDB.seMethods[2],
- 
+          col4: d.dataDB.researchMethod[2],
+          col5: d.dataDB.journal[2],
+          col6: d.dataDB.article[2],
+          col7: d.dataDB.datePublished[2],
+          col8: d.dataDB.year[2],
+          // col9: d.dataDB.moderated[2],
         },
  
       ],
