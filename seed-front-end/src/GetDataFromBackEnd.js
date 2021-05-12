@@ -1,3 +1,5 @@
+// react table
+// import { useTable } from 'react-table'
 // Saving data
 import { dataDB } from "./dataMongoDB.js";
 // Getting data
@@ -5,6 +7,7 @@ import React, { Component } from 'react'
 import axios from 'axios';
 const API_URL = 'http://localhost:8082/seeds/article';
 // var dbInstance;
+// var state;
 class GetDataFromBackEnd extends Component{
   // constructor(dbInstance)
   // {
@@ -39,9 +42,14 @@ class GetDataFromBackEnd extends Component{
                {/* <h5 className="card-title">{user.name}</h5> */}
                <h5 className="card-title">{db._id}</h5>
                <h5 className="card-title">{db.title}</h5>
+               <p>SE methods = {String(db.seMethods)}</p>
               <h6 className="card-subtitle mb-2 text-muted">
               {/* {user.email}              */}
-                {dataDB.title = db.title}
+                {/* {dataDB.title = db.title} */}
+                {dataDB.title.push(db.title)}
+                {dataDB.author.push(db.author)}
+                {dataDB.seMethods.push(db.seMethods)}
+                {/* {dataDB.title = push} */}
               </h6>
             </div>
           </div>
@@ -62,5 +70,11 @@ class GetDataFromBackEnd extends Component{
     );
     }
 }
+
+// exports.getBackEndData = function() {
+//   return state;
+// };
+
+
 
 export default GetDataFromBackEnd;

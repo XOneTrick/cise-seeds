@@ -4,9 +4,10 @@ import { dataDB } from "./dataMongoDB.js";
 function BasicTable() {
   // const columnHeaders = ['Title', 'Author', 'SE Method', 'Research Method', 'Journal', 'Article', 'Publish Date', 'Year', 'Moderated', 'Date Published'];
   // const columnNames = ['col1', 'col2', 'col3', 'col4', 'col5', 'col6', 'col7', 'col8', 'col9', 'col10'];
-  
+  const d = require("./dataMongoDB.js");
+  // var a = require("./GetDataFromBackEnd.js");
     const data = React.useMemo(
- 
+      
       () => [
  
         {
@@ -15,25 +16,25 @@ function BasicTable() {
           
           // col2: 'World',
           // col1: 'r1c1',//testing
-          col1: dataDB.title,
-          col2: 'r1c2',
-          col3: 'r1c3',
+          col1: d.dataDB.title[0],
+          col2: d.dataDB.author[0],
+          // col3: d.dataDB.seMethods[0],
  
         },
  
         {
  
-          col1: 'r2c1',
-          col2: 'r2c2',
-          col3: 'r2c3',
+           col1: d.dataDB.title[1],
+          col2: d.dataDB.author[1],
+          // col3: d.dataDB.seMethods[1],
  
         },
  
         {
  
-          col1: 'r3c1',
-          col2: 'r3c2',
-          col3: 'r3c3',
+          col1: d.dataDB.title[2],
+          col2: d.dataDB.author[2],
+          // col3: d.dataDB.seMethods[2],
  
         },
  

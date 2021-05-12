@@ -1,6 +1,8 @@
+// let titleArray = require("./dataMongoDB.js");
 const dataDB = {
-    title: "",
-
+    title: [],
+    author: [],
+    seMethods: [],
 }
 export { dataDB };
 // // const dataDB = null;
