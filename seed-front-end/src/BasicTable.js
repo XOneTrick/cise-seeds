@@ -1,6 +1,6 @@
 import React from 'react'
 import { useTable } from 'react-table'
-import { dataDB } from "./dataMongoDB.js";
+import BackEnd from "./dataMongoDB.js";
 function BasicTable() {
   // const columnHeaders = ['Title', 'Author', 'SE Method', 'Research Method', 'Journal', 'Article', 'Publish Date', 'Year', 'Moderated', 'Date Published'];
   // const columnNames = ['col1', 'col2', 'col3', 'col4', 'col5', 'col6', 'col7', 'col8', 'col9', 'col10'];
@@ -18,7 +18,7 @@ function BasicTable() {
           // col1: 'r1c1',//testing
           col1: d.dataDB.title[0],
           col2: d.dataDB.author[0],
-          // col3: d.dataDB.seMethods[0],
+          col3: d.dataDB.seMethods[0],
  
         },
  
@@ -26,7 +26,7 @@ function BasicTable() {
  
            col1: d.dataDB.title[1],
           col2: d.dataDB.author[1],
-          // col3: d.dataDB.seMethods[1],
+          col3: d.dataDB.seMethods[1],
  
         },
  
@@ -34,7 +34,7 @@ function BasicTable() {
  
           col1: d.dataDB.title[2],
           col2: d.dataDB.author[2],
-          // col3: d.dataDB.seMethods[2],
+          col3: d.dataDB.seMethods[2],
  
         },
  

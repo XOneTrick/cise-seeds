@@ -42,13 +42,13 @@ class GetDataFromBackEnd extends Component{
                {/* <h5 className="card-title">{user.name}</h5> */}
                <h5 className="card-title">{db._id}</h5>
                <h5 className="card-title">{db.title}</h5>
-               <p>SE methods = {String(db.seMethods)}</p>
+               <p>SE methods = {db.semethod}</p>
               <h6 className="card-subtitle mb-2 text-muted">
               {/* {user.email}              */}
                 {/* {dataDB.title = db.title} */}
                 {dataDB.title.push(db.title)}
                 {dataDB.author.push(db.author)}
-                {dataDB.seMethods.push(db.seMethods)}
+                {dataDB.seMethods.push(db.semethod)}
                 {/* {dataDB.title = push} */}
               </h6>
             </div>
