@@ -12,7 +12,7 @@ function App()
   // dataDB.title = "test";
   return (
     <div>
-      <h1>Header</h1>
+      <h1>SEED's</h1>
       <BasicTable></BasicTable>
       <GetDataFromBackEnd></GetDataFromBackEnd>
       {/* <h1>{dataDB.title}</h1> */}

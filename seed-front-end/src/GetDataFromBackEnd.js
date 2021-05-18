@@ -35,15 +35,15 @@ class GetDataFromBackEnd extends Component{
     return (
        <div className="container">
         <div className="col-xs-8">
-        <h1>React Axios Example</h1>
+        {/* <h1>React Axios Example</h1> */}
         {this.state.rows.map((db) => (
           <div className="card">
            <div className="card-body">
                {/* <h5 className="card-title">{user.name}</h5> */}
-               <h5 className="card-title">{db._id}</h5>
-               <h5 className="card-title">{db.title}</h5>
-               <p>SE methods = {db.semethod}</p>
-              <h6 className="card-subtitle mb-2 text-muted">
+               {/* <h5 className="card-title">{db._id}</h5> */}
+               {/* <h5 className="card-title">{db.title}</h5> */}
+               {/* <p>SE methods = {db.semethod}</p> */}
+              {/* <h6 className="card-subtitle mb-2 text-muted"> */}
               {/* {user.email}              */}
                 {/* {dataDB.title = db.title} */}
                 {dataDB.title.push(db.title)}
@@ -56,11 +56,11 @@ class GetDataFromBackEnd extends Component{
                 {dataDB.year.push(db.year)}
                 {/* {dataDB.moderated.push(db.moderated)} */}
                 {/* {dataDB.title = push} */}
-              </h6>
+              {/* </h6> */}
             </div>
           </div>
         ))}
-        <h5 className="card-title">{this.state.rows.length}</h5>
+        {/* <h5 className="card-title">{this.state.rows.length}</h5> */}
         </div>
         {/* <div> */}
             
