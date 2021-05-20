@@ -3,8 +3,8 @@ import React from 'react';
 function Table()
 {
     return (
-        <div className="App">
-          <header className="App-header">
+        <div className="Table">
+          <header className="Table-header">
             <p>table heading</p>
           </header>
         </div>
@@ -13,8 +13,10 @@ function Table()
 
 function makeTable()
 {
+    // return (
+
+    // );
     return "a";
 }
-
 
 export {Table, makeTable };
