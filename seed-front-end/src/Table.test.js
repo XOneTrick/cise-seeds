@@ -13,12 +13,13 @@ it("renders without crashing", () => {
   ReactDOM.render(<Table />, div);
 });
 
-test("string matches testting the expect function", () =>
-{
+test("string matches testting the expect function", () => {
   expect("a").toBe("a");
 });
 
-test("make table", () =>
-{
-    expect(makeTable()).toBe("a");
+test("make table", () => {
+  //expect(makeTable()).toBe("a");
+  const div = document.createElement("div");
+  ReactDOM.render(makeTable(), div);
+  expect(div).toMatchSnapshot();
 });

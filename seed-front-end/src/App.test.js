@@ -13,7 +13,6 @@ it("renders without crashing", () => {
   ReactDOM.render(<App />, div);
 });
 
-test("string matches", () =>
-{
+test("string matches", () => {
   expect("a").toBe("a");
 });

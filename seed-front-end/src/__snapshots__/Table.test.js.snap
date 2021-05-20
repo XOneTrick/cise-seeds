@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`make table 1`] = `
+<div>
+  <div
+    class="Table-Table"
+  >
+    <table>
+      <tr>
+        <th>
+          SE Method
+        </th>
+        <th>
+          Author
+        </th>
+      </tr>
+      <tr>
+        <td>
+          TDD
+        </td>
+        <td>
+          Josh Stroud
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+`;
