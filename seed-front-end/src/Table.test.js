@@ -21,4 +21,4 @@ test("string matches testting the expect function", () =>
 test("make table", () =>
 {
     expect(makeTable()).toBe("a");
-})
+});
