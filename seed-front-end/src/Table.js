@@ -14,14 +14,17 @@ function makeTable() {
   return (
     <div className="Table-Table">
       <table>
-        <tr>
-          <th>SE Method</th>
-          <th>Author</th>
-        </tr>
-        <tr>
-          <td>TDD</td>
-          <td>Josh Stroud</td>
-        </tr>
+        <tbody>
+          <tr>
+            <th>SE Method</th>
+            <th>Author</th>
+          </tr>
+
+          <tr>
+            <td>TDD</td>
+            <td>Josh Stroud</td>
+          </tr>
+        </tbody>
       </table>
     </div>
   );
